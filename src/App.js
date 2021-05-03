@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+import React, {useState, useEffect, useLayoutEffect} from 'react';
+import ReactDOM from 'react-dom';
 import './App.css';
 
+import ToolBar from './ToolBar.js';
+import Painel from './Painel.js';
+
+
+
 function App() {
+  const [flow, setflow] = useState('x');
+
+  useLayoutEffect(() => {
+    const handleResize = (e) => {
+      let windowSize = {
+        height: document.documentElement.clientHeight,
+        width: document.documentElement.clientWidth,
+      }
+      if (windowSize.width >= windowSize.height) setflow('x');
+      if (windowSize.height > windowSize.width) setflow('y');
+    }
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={'app app-grid-' + flow}>
+      <ToolBar />
+      <Painel />
     </div>
   );
 }
