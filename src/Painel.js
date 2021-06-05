@@ -1,10 +1,13 @@
-import React, {useState, useEffect} from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 import './App.css';
+
+import RedBlackTree from './RedBlackTree.js';
 
 function Painel() {
     return (
-        <div className='painel' />
+        <div className='painel'>
+            <RedBlackTree />
+        </div>
     );
 }
 

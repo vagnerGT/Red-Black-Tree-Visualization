@@ -1,5 +1,4 @@
-import React, {useState, useEffect, useLayoutEffect} from 'react';
-import ReactDOM from 'react-dom';
+import React, {useState, useLayoutEffect} from 'react';
 import './App.css';
 
 import ToolBar from './ToolBar.js';

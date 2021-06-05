@@ -32,11 +32,48 @@ body {
 }
 
 .painel {
+  display: relative;
   grid-area: content;
   background-color: whitesmoke;
   border-radius: 20px;
+  overflow: hidden;
 }
 
-.test {
+.red-black-tree {
+  margin: 25px;
   position: relative;
 }
+
+.tree-node {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.circle {
+  z-index: 1;
+  background-color: black;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  transition: backgound-color 1s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.node-text {
+  color: white;
+  font-weight: bold;
+  line-height: 150%;
+}
+
+.svg-line {
+  z-index: 0;
+  position: absolute;
+}
+
+/*==============*/
+
