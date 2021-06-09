@@ -3,7 +3,7 @@ import './App.css';
 
 import TreeNode from './TreeNode.js';
 
-function RedBlackTree(p) {
+function RedBlackTree(props) {
     const [state, setState] = useState({
         pos: {x: 200, y: 200},
         linePos: {x: 0, y: 0},

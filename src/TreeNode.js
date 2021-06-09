@@ -106,7 +106,7 @@ function TreeNode(props) {
     const linePos = {x: state.linePos.x - state.pos.x, y: state.linePos.y - state.pos.y};
     const absLinePos = {x: Math.abs(linePos.x)+10, y: Math.abs(linePos.y)+10};
 
-    console.log('update', linePos);
+    console.log('update');
     return (
         <div style={{ left: pos.x, top: pos.y }} className='tree-node'>
             <div style={{ backgroundColor: bgColor }} className='circle'>
@@ -128,7 +128,7 @@ function TreeNode(props) {
                     fill='#008b8b'
                     stroke='#008b8b'
                     strokeWidth='5'
-                    stroke-linejoin='round'
+                    strokeLinejoin='round'
                 />
             </svg>
         </div>

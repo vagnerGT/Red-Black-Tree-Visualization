@@ -8,7 +8,7 @@ html, body, #root {
 }
 
 body {
-  background-color: rgb(35, 173, 166);
+  background-color: whitesmoke;
 }
 
 .app {
@@ -18,24 +18,28 @@ body {
 }
 
 .app-grid-x {
-  grid-template: auto / minmax(100px, 15vw) minmax(300px, 85vw);
+  grid-template: auto / minmax(100px, 20vw) minmax(300px, 80vw);
   grid-template-areas: "bar content";
 }
 .app-grid-y {
-  grid-template: minmax(300px, 85vh) minmax(100px, 15vh) / auto;
+  grid-template: minmax(300px, 80vh) minmax(100px, 20vh) / auto;
   grid-template-areas: "content" "bar";
 }
 
 .tool-bar {
   grid-area: bar;
-  background-color: transparent;
+  background-color: rgb(21, 158, 168);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .painel {
   display: relative;
   grid-area: content;
-  background-color: whitesmoke;
-  border-radius: 20px;
+  background-color: transparent;
+  /*border: 2px solid black;*/
   overflow: hidden;
 }
 
@@ -74,6 +78,21 @@ body {
   z-index: 0;
   position: absolute;
 }
+
+.button-container:hover {
+  background-color: rgb(29, 124, 124);
+}
+
+.button-container {
+  font-weight: bold;
+  line-height: 150%;
+  padding: 1vw 3vw;
+  color: white;
+  background-color: rgb(0, 83, 83);
+  border: none;
+  border-radius: 5px;
+}
+
 
 /*==============*/
 
