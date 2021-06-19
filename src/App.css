@@ -1,6 +1,10 @@
-
 * {
   box-sizing: border-box;
+}
+
+*:focus {
+  outline-color: black;
+  outline-width: 1px;
 }
 
 html, body, #root {
@@ -13,33 +17,34 @@ body {
 
 .app {
   display: grid;
-  height: 100%;
+  height: 100vh;
   width: 100%;
 }
 
 .app-grid-x {
-  grid-template: auto / minmax(100px, 20vw) minmax(300px, 80vw);
+  grid-template: 100vh / minmax(100px, 20vw) minmax(300px, 80vw);
   grid-template-areas: "bar content";
 }
 .app-grid-y {
-  grid-template: minmax(300px, 80vh) minmax(100px, 20vh) / auto;
+  grid-template: minmax(300px, 80vh) minmax(200px, 20vh) / 100vw;
   grid-template-areas: "content" "bar";
 }
 
 .tool-bar {
   grid-area: bar;
-  background-color: rgb(21, 158, 168);
+  background-color: rgb(10, 155, 165);
 
   display: flex;
-  justify-content: center;
   align-items: center;
+
+  padding: max(1vw, 10px);
+  overflow: auto;
 }
 
 .painel {
   display: relative;
   grid-area: content;
   background-color: transparent;
-  /*border: 2px solid black;*/
   overflow: hidden;
 }
 
@@ -80,19 +85,65 @@ body {
 }
 
 .button-container:hover {
-  background-color: rgb(29, 124, 124);
+  background-color: rgb(75, 75, 75);
+  cursor: pointer;
 }
 
 .button-container {
+  font-size: 2rem;
   font-weight: bold;
-  line-height: 150%;
-  padding: 1vw 3vw;
+
+  height: 45%;
+  width: 100%;
+
+  background-color: rgb(50, 50, 50);
   color: white;
-  background-color: rgb(0, 83, 83);
   border: none;
   border-radius: 5px;
 }
 
+.pad-textbox {
+  font-size: 2.5rem;
+  text-align: center;
 
-/*==============*/
+  height: 45%;
+  width: 100%;
 
+  border: none;
+  border-radius: 5px;
+}
+
+.pad {
+  background-color: rgba(0, 0, 0, 0);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  box-sizing: content-box;
+
+  max-width: 110px;
+  width: 100%;
+  max-height: 110px;
+  height: 100%;
+}
+
+/* scrollbar */
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: rgb(179, 177, 177);
+}
+*::-webkit-scrollbar-thumb {
+  background: rgb(136, 136, 136);
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgb(100, 100, 100);
+}
+*::-webkit-scrollbar-thumb:active {
+  background: rgb(68, 68, 68);
+}

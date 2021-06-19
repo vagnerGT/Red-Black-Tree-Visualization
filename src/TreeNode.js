@@ -106,7 +106,6 @@ function TreeNode(props) {
     const linePos = {x: state.linePos.x - state.pos.x, y: state.linePos.y - state.pos.y};
     const absLinePos = {x: Math.abs(linePos.x)+10, y: Math.abs(linePos.y)+10};
 
-    console.log('update');
     return (
         <div style={{ left: pos.x, top: pos.y }} className='tree-node'>
             <div style={{ backgroundColor: bgColor }} className='circle'>

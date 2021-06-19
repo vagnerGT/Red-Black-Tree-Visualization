@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className={'app app-grid-' + flow}>
-      <ToolBar />
+      <ToolBar direction={flow === 'x' ? 'y' : 'x'}/>
       <Painel />
     </div>
   );

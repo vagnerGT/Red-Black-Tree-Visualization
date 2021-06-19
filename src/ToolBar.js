@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
 
-import ButtonContainer from './ButtonContainer';
+import AdderPad from './AdderPad.js';
 
-function ToolBar() {
+function ToolBar(props) {
+    const direction = props.direction === 'y' ? 'column' : 'row';
+
     return (
-        <div className='tool-bar'>
-            <ButtonContainer>
-                <p>Button</p>
-            </ButtonContainer>
+        <div style={{flexDirection: direction}} className='tool-bar'>
+            <AdderPad/>
         </div>
     );
 };
