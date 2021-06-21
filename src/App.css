@@ -26,15 +26,16 @@ body {
   display: grid;
   height: 100vh;
   width: 100%;
-}
 
-.app-grid-x {
-  grid-template: 100vh / minmax(100px, 20vw) minmax(300px, 80vw);
-  grid-template-areas: "bar content";
-}
-.app-grid-y {
   grid-template: minmax(300px, 80vh) minmax(200px, 20vh) / 100vw;
   grid-template-areas: "content" "bar";
+}
+
+@media (orientation: landscape) {
+  .app {
+    grid-template: 100vh / minmax(100px, 20vw) minmax(300px, 80vw);
+    grid-template-areas: "bar content";
+  }
 }
 
 /* tool bar */
@@ -44,10 +45,17 @@ body {
   background-color: rgb(10, 155, 165);
 
   display: flex;
+  flex-direction: row;
   align-items: center;
 
   padding: max(1vw, 10px);
   overflow: auto;
+}
+
+@media (orientation: landscape) {
+  .tool-bar {
+    flex-direction: column;
+  }
 }
 
 /* painel */ 
