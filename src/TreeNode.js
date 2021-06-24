@@ -98,7 +98,7 @@ function useAnimatedState(props) {
 function TreeNode(props) {
     const state = useAnimatedState({
         pos: {data: props.pos, time: 1000 / props.speed},
-        linePos: {data: props.linePos, time: 1000 / props.speed},
+        linePos: {data: props.linePos || props.pos, time: 1000 / props.speed},
     });
 
     const bgColor = props.color === 'Black' ? 'black' : 'rgb(160, 45, 45)';
