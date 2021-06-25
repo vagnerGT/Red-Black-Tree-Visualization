@@ -101,7 +101,7 @@ function TreeNode(props) {
         linePos: {data: props.linePos || props.pos, time: 1000 / props.speed},
     });
 
-    const bgColor = props.color === 'Black' ? 'black' : 'rgb(160, 45, 45)';
+    const bgColor = props.color === 'black' ? 'black' : 'rgb(160, 45, 45)';
     const pos = state.pos;
     const linePos = {x: state.linePos.x - state.pos.x, y: state.linePos.y - state.pos.y};
     const absLinePos = {x: Math.abs(linePos.x)+10, y: Math.abs(linePos.y)+10};
