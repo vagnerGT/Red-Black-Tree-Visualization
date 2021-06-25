@@ -126,7 +126,7 @@ function TreeNode(props) {
                     }
                     fill='#008b8b'
                     stroke='#008b8b'
-                    strokeWidth='5'
+                    strokeWidth='0.4rem'
                     strokeLinejoin='round'
                 />
             </svg>

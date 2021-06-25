@@ -86,9 +86,9 @@ body {
 .circle {
   z-index: 1;
   background-color: black;
-  height: 50px;
-  width: 50px;
-  border-radius: 50px;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
   transition: backgound-color 1s;
 
   display: flex;
