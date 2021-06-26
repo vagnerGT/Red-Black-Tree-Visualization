@@ -63,15 +63,27 @@ body {
 .painel {
   display: relative;
   grid-area: content;
-  background-color: transparent;
-  overflow: hidden;
 }
 
 /* red black tree */
 
 .red-black-tree {
-  margin: 25px;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+.red-black-tree > div {
+  overflow: hidden;
+  box-sizing: content-box;
+  margin: auto;
+  padding: 3.5rem 7rem 7rem 3.5rem;
+}
+
+.red-black-tree > div > div {
   position: relative;
+  width: 0;
+  height: 0;
 }
 
 /* tree node */
